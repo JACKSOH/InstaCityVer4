@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    tools:context=".createFragment"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag_create"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/titleNewFeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:textSize="55px"
+        android:layout_centerHorizontal="true"
+        android:text="@string/new_feed"
+        android:textColor="@color/notSoBlack"
+        android:textStyle="bold"
+        />
+
+    <EditText
+
+        android:id="@+id/captionEvent"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationFeedSpinner"
+
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="110dp"
+        android:ems="10"
+        android:hint="@string/caption_hint"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textSize="15sp" />
+
+    <Button
+
+        android:id="@+id/createButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textFeedPhoto"
+android:layout_centerHorizontal="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="74dp"
+        android:background="@drawable/button"
+        android:padding="15dp"
+        android:text="Create"
+        android:textColor="@color/pureWhite"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:textColor="@color/notSoBlack"
+        android:textStyle="bold"
+        android:id="@+id/chooseLocationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleNewFeed"
+        android:layout_marginTop="26dp"
+        android:layout_toStartOf="@+id/textFeedPhoto"
+        android:text="@string/choose_location" />
+    <Spinner
+
+        android:autofillHints="@string/choose_location"
+        android:id="@+id/locationFeedSpinner"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/titleNewFeed"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:prompt="@string/location"
+        android:entries="@array/location"/>
+
+    <TextView
+        android:id="@+id/textFeedPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createImage"
+        android:layout_centerHorizontal="true"
+        android:text="@string/add_photo" />
+
+    <ImageButton
+
+        android:id="@+id/createImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/captionEvent"
+    android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        app:srcCompat="@drawable/icons8_add_new_104px" />
+
+</RelativeLayout>
+</ScrollView>
