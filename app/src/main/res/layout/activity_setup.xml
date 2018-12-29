@@ -17,14 +17,17 @@
     android:layout_width="wrap_content"
     android:layout_height="250dp"
     android:background="@drawable/city">
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/setupImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/user"
-        android:background="@drawable/images"/>
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:background="@color/pureWhite"
+        android:src="@drawable/user"/>
 </RelativeLayout>
 
     <RelativeLayout

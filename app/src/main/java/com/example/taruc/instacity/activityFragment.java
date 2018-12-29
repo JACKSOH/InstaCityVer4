@@ -105,7 +105,7 @@ public class activityFragment extends Fragment{
                 FirebaseRecyclerOptions.Builder<EventClass>()
                 .setQuery(query,EventClass.class).build();
 
-    //    Log.d("hihi",
+        Log.d("gordon","ok");
 
 
         adapter= new FirebaseRecyclerAdapter<EventClass,eventViewHolder>
@@ -117,7 +117,9 @@ public class activityFragment extends Fragment{
 
             @Override
             protected void onBindViewHolder(eventViewHolder holder, int position, EventClass model) {
-                holder.setEventTitle(model.getEventTitle());
+
+
+               holder.setEventTitle(model.getEventTitle());
 
                 holder.setEventDate(model.getEventDate());
                 holder.setStartTime(model.getStartTime());
@@ -130,9 +132,12 @@ public class activityFragment extends Fragment{
             }
             @Override
             public eventViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+
                 View view = LayoutInflater.from(viewGroup.getContext())
                         .inflate(R.layout.all_activities_layout, viewGroup, false);
-                return new eventViewHolder(view);
+                eventViewHolder ev = new eventViewHolder(view);
+                Log.d("gordon","ok2");
+                return ev;
             }
 
 
@@ -153,13 +158,14 @@ public class activityFragment extends Fragment{
     @Override
     public void onStart() {
         super.onStart();
-        //adapter.startListening();
+        Log.d("gordon","ok1");
+      //  adapter.startListening();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        //adapter.stopListening();
+      //  adapter.stopListening();
     }
 
     private static class eventViewHolder extends RecyclerView.ViewHolder{

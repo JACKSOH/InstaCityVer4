@@ -134,7 +134,7 @@ public class feedFragment extends Fragment{
 
 
         };
-        Log.d("hihi",adapter.getItemCount()+"22");
+
         feedList.setAdapter(adapter);
 
         /*
