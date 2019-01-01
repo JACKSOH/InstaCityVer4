@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editProfileActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="161dp"
+        android:text="@string/user_name"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/fullname"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/ic"
+        android:layout_width="59dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullname"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/ic"
+        android:textSize="14dp" />
+
+
+    <Button
+        android:id="@+id/edit_prof_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="106dp"
+        android:text="@string/confirm" />
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/username"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/username"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/edit_fullname"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_username"
+        android:layout_alignEnd="@+id/edit_username"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="1dp"
+        android:layout_toEndOf="@+id/fullname"
+        android:ems="10"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/edit_ic"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_fullname"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="18dp"
+        android:layout_toEndOf="@+id/ic"
+        android:ems="10"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/phonenum"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_below="@+id/ic"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="191dp"
+        android:text="@string/phonenum"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/edit_phonenum"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_ic"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/phonenum"
+        android:ems="10"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="63dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="296dp"
+        android:clickable="true"
+        android:onClick="backClick"
+        app:srcCompat="@drawable/back" />
+</RelativeLayout>
