@@ -1,0 +1,4 @@
+#Tue Jan 01 20:26:28 SGT 2019
+base.0=D\:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
