@@ -45,8 +45,9 @@
     <string name="user_post3">user post3</string>
     <!-- Edit Profile part -->
     <string name="edit_profile">Edit Profile</string>
+    <string name="fullname">Full Name</string>
     <string name="ic">IC</string>
-    <string name="ic_text">921203-51-4234</string>
+    <string name="phonenum">Phone Number</string>
     <!-- setting -->
     <string name="setting">Setting</string>
     <string name="change_password">Change Password</string>
@@ -67,4 +68,8 @@
     <string name="back">Back button</string>
     <string name="email">Email</string>
     <string name="email_test">123@gmail.com</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="search_location_hint">Enter Address, City or Zip Code</string>
+    <string name="comments">Comments</string>
+    <string name="comment_text">Write a comment here....</string>
 </resources>

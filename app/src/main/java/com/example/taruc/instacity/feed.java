@@ -1,20 +1,30 @@
 package com.example.taruc.instacity;
 
+import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -33,11 +43,11 @@ public class feed extends AppCompatActivity{
     BottomNavigationView bnv;
     ViewPager vp;
     MenuItem prevMenuItem;
-
+    ImageView mapsButton;
     private FirebaseAuth mAuth;
     private DatabaseReference usersRef;
-
-
+    private FusedLocationProviderClient mFusedLocationClient;
+    private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 1;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -106,14 +116,66 @@ public class feed extends AppCompatActivity{
 
             }
         });
+        // indicate map button
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+      //  mapsButton = (ImageView) findViewById(R.id.setting);
+     /*   mapsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-
+                mapsLocation();
+            }
+        });
+*/
         setupViewPager(vp);
 
 
 
 
 
+    }
+
+    private void mapsLocation() {
+        // Here, thisActivity is the current activity
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_CONTACTS)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Permission is not granted
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION)) {
+                new AlertDialog.Builder(this).setTitle("Requeired Location Permission")
+                        .setMessage("You have to grant to this permission")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        }).setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                        .create()
+                        .show();
+
+            } else {
+                // No explanation needed; request the permission
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                        MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+
+                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                // app-defined int constant. The callback method gets the
+                // result of the request.
+            }
+        } else {
+            Intent mapsActivity = new Intent(feed.this,MapsActivity.class);
+            startActivity(mapsActivity);
+
+        }
     }
 
     @Override
@@ -192,6 +254,7 @@ public class feed extends AppCompatActivity{
     }
 
     public void settingListener(View view) {
-
+        Intent settingIntent = new Intent(feed.this,MapsActivity.class);
+        startActivity(settingIntent);
     }
 }

@@ -105,7 +105,7 @@ public class activityFragment extends Fragment{
                 FirebaseRecyclerOptions.Builder<EventClass>()
                 .setQuery(query,EventClass.class).build();
 
-        Log.d("gordon","ok");
+
 
 
         adapter= new FirebaseRecyclerAdapter<EventClass,eventViewHolder>
@@ -117,7 +117,7 @@ public class activityFragment extends Fragment{
 
             @Override
             protected void onBindViewHolder(eventViewHolder holder, int position, EventClass model) {
-
+                Log.d("yo","no this3");
 
                holder.setEventTitle(model.getEventTitle());
 
@@ -132,7 +132,7 @@ public class activityFragment extends Fragment{
             }
             @Override
             public eventViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-
+                Log.d("yo","no this2");
                 View view = LayoutInflater.from(viewGroup.getContext())
                         .inflate(R.layout.all_activities_layout, viewGroup, false);
                 eventViewHolder ev = new eventViewHolder(view);
@@ -159,13 +159,13 @@ public class activityFragment extends Fragment{
     public void onStart() {
         super.onStart();
         Log.d("gordon","ok1");
-      //  adapter.startListening();
+        adapter.startListening();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-      //  adapter.stopListening();
+        adapter.stopListening();
     }
 
     private static class eventViewHolder extends RecyclerView.ViewHolder{
@@ -193,15 +193,18 @@ public class activityFragment extends Fragment{
             t.setText(endTime);
         }
         public void setEventDate(String eventDate){
+            Log.d("yo","no this");
             TextView d = (TextView)mView.findViewById(R.id.eventActualDate);
             d.setText(eventDate);
         }
         public void setEventCaption(String eventCaption){
+            Log.d("yo","no this");
             TextView d = (TextView)mView.findViewById(R.id.captionHeyEvent);
             d.setText(eventCaption);
         }
 
         public void setEventImage(Context ctx1,String postImage){
+            Log.d("yo","no this");
             ImageView image=(ImageView)mView.findViewById(R.id.eventImage);
             Picasso.with(ctx1).load(postImage).into(image);
         }

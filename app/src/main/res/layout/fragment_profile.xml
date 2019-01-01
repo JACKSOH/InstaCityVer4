@@ -8,25 +8,23 @@
     tools:context=".profileFragment">
 
 
-
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="351dp"
         android:layout_above="@id/navigation"
-        android:layout_below="@id/card"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="216dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:gravity="center_vertical"
         android:background="@color/lightGrey"
-        />
+        android:gravity="center_vertical" />
 
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_prof"
         android:layout_width="116dp"
         android:layout_height="120dp"
@@ -67,9 +65,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="114dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginStart="197dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="171dp"
         android:text="@string/total_love"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,9 +97,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="276dp"
-        android:layout_marginTop="114dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="84dp"
         android:text="@string/total_bookmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.706"
@@ -109,7 +107,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/prof_username"
         android:layout_width="102dp"
         android:layout_height="22dp"
         android:layout_alignParentStart="true"
@@ -118,7 +116,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="163dp"
         android:layout_marginEnd="246dp"
-        android:text="@string/username"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,14 +137,25 @@
         android:id="@+id/recycleview_id"
         android:layout_width="match_parent"
         android:layout_height="351dp"
-        android:layout_below="@+id/divider"
+        android:layout_alignTop="@+id/divider"
         android:layout_alignBottom="@+id/pager"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"></android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/edit_profile"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_love"
+        android:layout_alignStart="@+id/total_love"
+        android:layout_marginStart="-22dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/edit_profile"
+        />
 
 
 </RelativeLayout>

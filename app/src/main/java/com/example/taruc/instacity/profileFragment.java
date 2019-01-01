@@ -1,7 +1,7 @@
 package com.example.taruc.instacity;
 
 import android.content.Context;
-import android.media.Image;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,7 +12,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -26,13 +29,15 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 
-
 public class profileFragment extends Fragment {
     private RecyclerView userpost;
+    private TextView userProfName;
     private ImageView userProf;
+    private Button editProf;
     private FirebaseAuth mAuth;
     private DatabaseReference postsRef;
     private DatabaseReference usersRef;
+    private DatabaseReference namesRef;
     private FirebaseRecyclerAdapter<ProfileClass,profileViewHolder> adapter;
 
     private OnFragmentInteractionListener mListener;
@@ -40,9 +45,6 @@ public class profileFragment extends Fragment {
     public profileFragment() {
         // Required empty public constructor
     }
-
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,12 +57,26 @@ public class profileFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         final ImageView userProf = (ImageView) view.findViewById((R.id.user_prof));
+        userProfName = (TextView) view.findViewById(R.id.prof_username);
         String imgPath="";
         userpost = (RecyclerView)view.findViewById(R.id.recycleview_id);
         mAuth = FirebaseAuth.getInstance();
         current_user_id = mAuth.getCurrentUser().getUid();
         usersRef =FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid()).child("profileImage");
+        namesRef =FirebaseDatabase.getInstance().getReference().child("Users").child(current_user_id).child("userName");
 
+        //edit profile button
+        editProf = (Button) view.findViewById(R.id.edit_profile);
+        editProf.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Toast.makeText(getContext(),"watever",Toast.LENGTH_SHORT);
+                Intent editIntent = new Intent(getActivity(),editProfileActivity.class);
+                startActivity(editIntent);
+            }
+        });
+
+        //get user profile picture
         usersRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -68,7 +84,19 @@ public class profileFragment extends Fragment {
                 Log.d("grod",dataSnapshot.getValue()+"");
                 Picasso.with(getContext()).load(dataSnapshot.getValue().toString()).into(userProf);
             }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+            // get username
+        namesRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                Log.d("aaa",dataSnapshot.getValue()+"");
+                userProfName.setText(dataSnapshot.getValue().toString());
+            }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -76,12 +104,13 @@ public class profileFragment extends Fragment {
         });
 
         Log.d("grod",usersRef+"");
+        Log.d("aaa",namesRef+"");
 
         postsRef = FirebaseDatabase.getInstance().getReference().child("Posts");
         Query query = postsRef.orderByKey();
 
         userpost.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
         linearLayoutManager.setReverseLayout(true);
         linearLayoutManager.setStackFromEnd(true);
         userpost.setLayoutManager(linearLayoutManager);
@@ -93,10 +122,6 @@ public class profileFragment extends Fragment {
         adapter= new FirebaseRecyclerAdapter<ProfileClass,profileViewHolder>
                 (options)
         {
-
-
-
-
             @Override
             protected void onBindViewHolder(profileViewHolder holder, int position, ProfileClass model) {
 
@@ -117,6 +142,12 @@ public class profileFragment extends Fragment {
         Log.d("jack",adapter.getItemCount()+"");
         return view;
     }
+    //move to edit profile page
+//    private void SendUserToEditProfile(){
+//        Intent editIntent = new Intent(getActivity(),EditProfileActivity.class);
+//        startActivity(editIntent);
+//    }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -143,6 +174,7 @@ public class profileFragment extends Fragment {
             profile = (ImageView) itemView.findViewById(R.id.profile_post);
             Picasso.with(ctx1).load(postImage).into(profile);
         }
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

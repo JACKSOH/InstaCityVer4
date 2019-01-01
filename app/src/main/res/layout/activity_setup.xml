@@ -24,9 +24,8 @@
         android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/user"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000"
-        android:background="@color/pureWhite"
+
+        android:background="@drawable/images"
         android:src="@drawable/user"/>
 </RelativeLayout>
 

@@ -2,9 +2,10 @@ package com.example.taruc.instacity;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-public class createPagerAdapter extends FragmentStatePagerAdapter {
+public class createPagerAdapter extends FragmentPagerAdapter {
     int NumOfTabs;
 
 

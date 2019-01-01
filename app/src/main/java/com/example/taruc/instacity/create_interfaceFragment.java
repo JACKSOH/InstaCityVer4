@@ -7,13 +7,16 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TableLayout;
+import android.widget.Toast;
 
 
 /**
@@ -29,8 +32,8 @@ public class create_interfaceFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
     // TODO: Rename and change types of parameters
-
-
+    ViewPager viewPager;
+    createPagerAdapter adapter;
     private TabLayout tabLayout;
     private OnFragmentInteractionListener mListener;
 
@@ -58,12 +61,32 @@ public class create_interfaceFragment extends Fragment {
 
 
     }
-
+    private void swtichChildFragment(int position){
+        createFragment createPostFragment = new createFragment();
+        create_eventFragment createEventFragment = new create_eventFragment();
+        if(position==0){
+            FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+            transaction.replace(R.id.createFragment,createPostFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        }else {
+            FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+            transaction.replace(R.id.createFragment,createEventFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        }
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         Log.d("testing","create Interface created");
         View view = inflater.inflate(R.layout.fragment_create_interface, container, false);
+        FrameLayout frag = view.findViewById(R.id.createFragment);
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.createFragment,new createFragment());
+        transaction.addToBackStack(null);
+        transaction.commit();
         tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText(R.string.feed_tab));
         tabLayout.addTab(tabLayout.newTab().setText(R.string.event_tab));
@@ -73,20 +96,22 @@ public class create_interfaceFragment extends Fragment {
         // Use PagerAdapter to manage page views in fragments.
         // Use PagerAdapter to manage page views in fragments.
         // Each page is represented by its own fragment.
-        final ViewPager viewPager = view.findViewById(R.id.createPager);
+      /*   viewPager = view.findViewById(R.id.createPager);
 
-       final createPagerAdapter adapter = new createPagerAdapter
+      adapter = new createPagerAdapter
                 ((FragmentManager) getActivity().getSupportFragmentManager(),tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
-        Log.d("tabcount",tabLayout.getTabCount()+"88");
+
+
             // Setting a listener for clicks.
-        /*viewPager.addOnPageChangeListener(new
-                TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        viewPager.addOnPageChangeListener(new
+                TabLayout.TabLayoutOnPageChangeListener(tabLayout));*/
+
         tabLayout.addOnTabSelectedListener(new
                                                    TabLayout.OnTabSelectedListener() {
                                                        @Override
                                                        public void onTabSelected(TabLayout.Tab tab) {
-                                                           viewPager.setCurrentItem(tab.getPosition());
+                                                           swtichChildFragment(tab.getPosition());
+                                                           Toast.makeText(getContext(), "Hello1"+tab.getPosition(), Toast.LENGTH_SHORT).show();
                                                        }
 
                                                        @Override
@@ -95,10 +120,13 @@ public class create_interfaceFragment extends Fragment {
 
                                                        @Override
                                                        public void onTabReselected(TabLayout.Tab tab) {
+
                                                        }
-                                                   });*/
+                                                   });
 
         // Inflate the layout for this fragment
+//        Toast.makeText(getContext(), "Hello1"+adapter.getItem(0), Toast.LENGTH_SHORT).show();
+        //viewPager.setAdapter(adapter);*/
         return view;
     }
 
@@ -119,6 +147,9 @@ public class create_interfaceFragment extends Fragment {
                     + " must implement OnFragmentInteractionListener");
         }
     }*/
+
+
+
 
     @Override
     public void onDetach() {

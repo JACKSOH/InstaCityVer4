@@ -2,6 +2,8 @@ package com.example.taruc.instacity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,9 +12,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -48,9 +52,12 @@ public class feedFragment extends Fragment{
     private RecyclerView feedList;
     private FirebaseAuth mAuth;
     private DatabaseReference usersRef,postsRef;
+    private static LruCache<String,Bitmap> mMemoryCache;
     private FirebaseRecyclerAdapter<FeedsClass,feedViewHolder> adapter;
 
+
     String currentUserID;
+
 
 
 
@@ -85,9 +92,19 @@ public class feedFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        Toast.makeText(getContext(), "Hello", Toast.LENGTH_SHORT).show();
 
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
         feedList = (RecyclerView)view.findViewById(R.id.allFeedList);
+
+        final int maxMemorySize = (int) Runtime.getRuntime().maxMemory()/1024;
+        final int cacheSize = maxMemorySize/10;
+        mMemoryCache = new LruCache<String, Bitmap>(cacheSize){
+            @Override
+            protected int sizeOf(String key, Bitmap value) {
+                return value.getByteCount()/1024;
+            }
+        };
 
         mAuth = FirebaseAuth.getInstance();
         currentUserID = mAuth.getCurrentUser().getUid();
@@ -117,12 +134,25 @@ public class feedFragment extends Fragment{
 
             @Override
             protected void onBindViewHolder(feedViewHolder holder, int position, FeedsClass model) {
+
+                final String PostKey = getRef(position).getKey();
                 holder.setUsername(model.getUserName());
                 holder.setCaption(model.getCaption());
                 holder.setDate(model.getDate());
                 holder.setTime(model.getTime());
                 holder.setPostImage(getContext(),model.getPostImage());
                 holder.setProfileImage(getContext(),model.getProfileImage());
+
+                holder.feedComment.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent commentIntent=new Intent(getActivity(),feedCommentActivity.class);
+                        commentIntent.putExtra("PostKey",PostKey);
+                        startActivity(commentIntent);
+                    }
+                });
+
+
 
             }
             @Override
@@ -141,6 +171,14 @@ public class feedFragment extends Fragment{
          */
 
         return view;
+    }
+    public static Bitmap getBitmapFromMemoryCache(String key){
+        return mMemoryCache.get(key);
+    }
+    public static void setBitMapToMemoryCache(String key, Bitmap bitmap){
+        if(getBitmapFromMemoryCache(key) == null){
+            mMemoryCache.put(key, bitmap);
+        }
     }
 
     @Override
@@ -165,9 +203,11 @@ public class feedFragment extends Fragment{
     private static class feedViewHolder extends RecyclerView.ViewHolder{
 
         View mView;
+        ImageButton feedComment;
         public feedViewHolder(View itemView){
             super(itemView);
             mView=itemView;
+            feedComment = (ImageButton)itemView.findViewById(R.id.feed_comment_button);
         }
         public void setUsername(String username){
             TextView usern = (TextView)mView.findViewById(R.id.feedUserName);
@@ -193,6 +233,7 @@ public class feedFragment extends Fragment{
         public void setPostImage(Context ctx1,String postImage){
             ImageView image=(ImageView)mView.findViewById(R.id.feedImage);
             Picasso.with(ctx1).load(postImage).into(image);
+            // workerTask = new BitMapWorkerTask(image);
         }
     }
 

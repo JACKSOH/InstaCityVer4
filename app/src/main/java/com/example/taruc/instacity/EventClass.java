@@ -12,10 +12,23 @@ public class EventClass {
     public String endTime;
     public String location;
     public String uid;
-    public void EventClass(){
+
+    public EventClass(){
 
     }
-
+    public EventClass(String eventCaption,String eventTitle, String uploadDate,String uploadTime,String eventDate, String eventImage, String userName,  String startTime, String endTime, String location, String uid) {
+        this.eventCaption = eventCaption;
+        this.eventDate = eventDate;
+        this.eventImage = eventImage;
+        this.userName = userName;
+        this.uploadDate= uploadDate;
+        this.uploadTime = uploadTime;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.location = location;
+        this.uid = uid;
+        this.eventTitle = eventTitle;
+    }
     public String getEventCaption() {
         return eventCaption;
     }
@@ -103,19 +116,7 @@ public class EventClass {
         this.eventTitle = eventTitle;
     }
 
-    public EventClass(String eventCaption,String eventTitle, String uploadDate,String uploadTime,String eventDate, String eventImage, String userName,  String startTime, String endTime, String location, String uid) {
-        this.eventCaption = eventCaption;
-        this.eventDate = eventDate;
-        this.eventImage = eventImage;
-        this.userName = userName;
-         this.uploadDate= uploadDate;
-        this.uploadTime = uploadTime;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.location = location;
-        this.uid = uid;
-        this.eventTitle = eventTitle;
-    }
+
 
 
 

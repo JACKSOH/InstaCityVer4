@@ -19,7 +19,7 @@
             android:padding="5dp"
             android:orientation="horizontal">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/feedProfileImage"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -99,6 +99,46 @@
             android:layout_marginBottom="3dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_like"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Likes"
+                android:padding="15dp"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/feed_comment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_comment"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:baselineAlignBottom="false"
+                /></LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

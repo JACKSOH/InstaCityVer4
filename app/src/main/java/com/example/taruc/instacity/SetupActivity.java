@@ -44,6 +44,7 @@ public class SetupActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference UsersRef;
     private ProgressDialog loadingBar;
+
     private static final int Gallery_Pick=1;
     private Uri ImageUri;
 

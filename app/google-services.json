@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "406454853196-mmf88ll0bu0jlh4rg80pgrml31s7lvea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taruc.instacity",
+            "certificate_hash": "2bad08559441d36b3e7d8b500c1b3fff3bb15473"
+          }
+        },
+        {
           "client_id": "406454853196-lq3u7biij6i991tom3kfem003la087rj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
