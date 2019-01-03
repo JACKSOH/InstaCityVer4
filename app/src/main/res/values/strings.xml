@@ -48,6 +48,8 @@
     <string name="fullname">Full Name</string>
     <string name="ic">IC</string>
     <string name="phonenum">Phone Number</string>
+    <string name="change_pass">Change Password</string>
+    <string name="edit_prof_detail">Edit Profile Details</string>
     <!-- setting -->
     <string name="setting">Setting</string>
     <string name="change_password">Change Password</string>

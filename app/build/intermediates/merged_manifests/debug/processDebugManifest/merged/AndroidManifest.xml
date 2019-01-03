@@ -55,6 +55,8 @@
         <activity android:name="com.example.taruc.instacity.LoginActivity" />
         <activity android:name="com.example.taruc.instacity.SetupActivity" />
         <activity android:name="com.example.taruc.instacity.editProfileActivity" />
+        <activity android:name="com.example.taruc.instacity.editProfileOptionActivity" />
+        <activity android:name="com.example.taruc.instacity.changePassword" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

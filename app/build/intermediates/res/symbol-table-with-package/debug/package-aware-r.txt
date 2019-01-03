@@ -1199,6 +1199,8 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id change_pass
+id change_password
 id checkbox
 id chooseLocationLabel
 id chronometer
@@ -1210,6 +1212,7 @@ id comment_text
 id comment_time
 id comment_username
 id comments_list
+id confirm
 id container
 id content
 id contentPanel
@@ -1236,7 +1239,9 @@ id divider
 id edit_fullname
 id edit_ic
 id edit_phonenum
+id edit_prof
 id edit_prof_confirm
+id edit_prof_detail
 id edit_profile
 id edit_query
 id edit_username
@@ -1297,7 +1302,9 @@ id imageView3
 id imageView4
 id imageView5
 id imageView6
+id imageView7
 id imageView8
+id imageView9
 id img
 id info
 id invisible
@@ -1336,11 +1343,16 @@ id navigation_feed
 id navigation_header_container
 id navigation_profile
 id never
+id new_pass
+id new_pass2
+id new_password
 id none
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id old_pass
+id old_password
 id outline
 id packed
 id pager
@@ -1366,6 +1378,7 @@ id registerLink
 id registerPassword
 id register_email
 id rel1
+id retype_pass
 id right
 id right_icon
 id right_side
@@ -1527,7 +1540,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_change_password
 layout activity_edit_profile
+layout activity_edit_profile_option
 layout activity_feed
 layout activity_feed_comment
 layout activity_login
@@ -1631,6 +1646,7 @@ string back
 string bookmark
 string bottom_sheet_behavior
 string caption_hint
+string change_pass
 string change_password
 string character_counter_content_description
 string character_counter_pattern
@@ -1658,6 +1674,7 @@ string common_signin_button_text_long
 string confirm
 string date
 string default_web_client_id
+string edit_prof_detail
 string edit_profile
 string email
 string email_test

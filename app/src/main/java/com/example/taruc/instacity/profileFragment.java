@@ -71,7 +71,7 @@ public class profileFragment extends Fragment {
             @Override
             public void onClick(View view){
                 Toast.makeText(getContext(),"watever",Toast.LENGTH_SHORT);
-                Intent editIntent = new Intent(getActivity(),editProfileActivity.class);
+                Intent editIntent = new Intent(getActivity(),editProfileOptionActivity.class);
                 startActivity(editIntent);
             }
         });
