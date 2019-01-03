@@ -28,6 +28,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -36,6 +37,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LocationManager locationManager;
     private EditText mSearchText;
     private ImageView searchImage;
+    String str;
+    double latt,longtt;
 
     /*private void init(){
         mSearchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -64,22 +67,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        Geocoder geocoder = new Geocoder(MapsActivity.this);
+        Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
         try{
             List<Address> addressList = geocoder.getFromLocationName(searchString,1);
-            String str = addressList.get(0).getAddressLine(0);
+            str = addressList.get(0).getAddressLine(0);
             str+=addressList.get(0).getLocality()+",";
             str+= addressList.get(0).getCountryName();
-            if(addressList.get(0).getLocality().equals("Cyberjaya")){
-                double latt=addressList.get(0).getLatitude();
-                double longtt = addressList.get(0).getLongitude();
-                LatLng search = new LatLng(latt,longtt);
-                mMap.addMarker(new MarkerOptions().position(search).title(str));
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(search,14F));
-            }else{
-                Toast.makeText(MapsActivity.this,"Invalid area input :"+addressList.get(0).getLocality(),Toast.LENGTH_SHORT).show();
+            //if(addressList.get(0).getLocality().equals("Cyberjaya")){
+                latt=addressList.get(0).getLatitude();
+                longtt = addressList.get(0).getLongitude();
 
-            }
+            //}else{
+            //    Toast.makeText(MapsActivity.this,"Invalid area input :"+addressList.get(0).getLocality(),Toast.LENGTH_SHORT).show();
+
+            //}
 
 
         }catch(IOException e){
@@ -211,6 +212,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
+        LatLng search = new LatLng(latt,longtt);
+        mMap.addMarker(new MarkerOptions().position(search).title(str));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(search,14F));
 
         // Add a marker in Sydney and move the camera
        // LatLng cyberjaya = new LatLng(2.911275, 101.643709);

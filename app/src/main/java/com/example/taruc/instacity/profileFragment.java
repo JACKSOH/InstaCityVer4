@@ -106,7 +106,7 @@ public class profileFragment extends Fragment {
         Log.d("grod",usersRef+"");
         Log.d("aaa",namesRef+"");
 
-        postsRef = FirebaseDatabase.getInstance().getReference().child("Posts");
+        postsRef = FirebaseDatabase.getInstance().getReference().child("Posts").child(current_user_id);
         Query query = postsRef.orderByKey();
 
         userpost.setHasFixedSize(true);

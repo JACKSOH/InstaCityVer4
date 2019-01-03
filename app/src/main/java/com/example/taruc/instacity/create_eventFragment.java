@@ -167,10 +167,10 @@ public class create_eventFragment extends Fragment {
             saveCurrentDate = currentDate.format(calFordDate.getTime());
             Log.d("hihi","testing 1 2 3 4");
             Calendar calFordTime = Calendar.getInstance();
-            SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm");
+            SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss");
             saveCurrentTime = currentTime.format(calFordTime.getTime());
 
-            post = saveCurrentDate + saveCurrentTime;
+            post = currentUserID+saveCurrentDate + saveCurrentTime;
 
             final StorageReference filePath = PostsImagesReference.child("Event Images").child(ImageUri.getLastPathSegment() + post + ".jpg");
             filePath.putFile(ImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {

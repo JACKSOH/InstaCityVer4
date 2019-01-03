@@ -1,12 +1,20 @@
 package com.example.taruc.instacity;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
@@ -18,6 +26,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -31,11 +45,15 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 
 import static android.app.Activity.RESULT_OK;
+import static android.content.Context.LOCATION_SERVICE;
 
 
 /**
@@ -66,6 +84,9 @@ public class createFragment extends Fragment {
     private StorageReference PostsImagesReference;
     private String saveCurrentDate,saveCurrentTime,post,downloadUrl;
     String currentUserID;
+    LocationManager locationManager;
+    private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS=1;
+    private GoogleMap mMap;
 
 
     private OnFragmentInteractionListener mListener;
@@ -128,6 +149,102 @@ public class createFragment extends Fragment {
                 OpenGallery();
             }
         });
+
+        /*locationManager = (LocationManager) getActivity().getSystemService(LOCATION_SERVICE);
+
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                    MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+        }
+
+
+        //check the network provider is enabled
+        if(locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, new LocationListener() {
+                @Override
+                public void onLocationChanged(Location location) {
+                    //get latitude
+                    double latitude=location.getLatitude();
+                    //get longtitude
+                    double longitude = location.getLongitude();
+                    LatLng latlng = new LatLng(latitude,longitude);
+                    Toast.makeText(getActivity(),latlng.toString(),Toast.LENGTH_SHORT);
+                    Geocoder geocoder = new Geocoder(getActivity(),Locale.getDefault());
+                    try{
+                        List<Address> addressList = geocoder.getFromLocation(latitude,longitude,1);
+                        String str = addressList.get(0).getAddressLine(0);
+                                str+=addressList.get(0).getLocality()+",";
+                        str+= addressList.get(0).getCountryName();
+                        Toast.makeText(getActivity(),latlng.toString(),Toast.LENGTH_SHORT).show();
+
+
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng,13F));
+                    }catch (IOException e){
+                        e.printStackTrace();
+                    }
+
+                }
+
+                @Override
+                public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                }
+
+                @Override
+                public void onProviderEnabled(String provider) {
+
+                }
+
+                @Override
+                public void onProviderDisabled(String provider) {
+
+                }
+            });
+        }else if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new LocationListener() {
+                @Override
+                public void onLocationChanged(Location location) {
+                    //get latitude
+                    double latitude=location.getLatitude();
+                    //get longtitude
+                    double longitude = location.getLongitude();
+                    LatLng latlng = new LatLng(latitude,longitude);
+
+                    Geocoder geocoder = new Geocoder(getActivity(),Locale.getDefault());
+                    try{
+                        List<Address> addressList = geocoder.getFromLocation(latitude,longitude,1);
+                       String str=addressList.get(0).getAddressLine(0)+",";
+                        str += addressList.get(0).getLocality()+",";
+                         str+= addressList.get(0).getCountryName();
+                        Toast.makeText(getActivity(),str,Toast.LENGTH_SHORT).show();
+
+
+
+                    }catch (IOException e){
+                        e.printStackTrace();
+                    }
+
+                }
+
+                @Override
+                public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                }
+
+                @Override
+                public void onProviderEnabled(String provider) {
+
+                }
+
+                @Override
+                public void onProviderDisabled(String provider) {
+
+                }
+            });
+        };*/
+
 
 
         return view;
@@ -195,10 +312,10 @@ public class createFragment extends Fragment {
         saveCurrentDate=currentDate.format(calFordDate.getTime());
 
         Calendar calFordTime = Calendar.getInstance();
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm");
+        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss");
         saveCurrentTime=currentTime.format(calFordTime.getTime());
 
-        post=saveCurrentDate+saveCurrentTime;
+        post= currentUserID+saveCurrentDate+saveCurrentTime;
 
         final StorageReference filePath = PostsImagesReference.child("Post Images").child(ImageUri.getLastPathSegment()+post+".jpg");
         filePath.putFile(ImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {

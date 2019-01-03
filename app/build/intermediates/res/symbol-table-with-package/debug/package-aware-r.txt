@@ -1096,6 +1096,7 @@ drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_like
+drawable ic_likes
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
@@ -1135,6 +1136,8 @@ drawable sample_1
 drawable sample_2
 drawable sample_3
 drawable setting
+drawable star
+drawable star_dark
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable user
@@ -1251,6 +1254,8 @@ id eventName
 id eventSTime
 id eventStartTime
 id eventTitle
+id event_likes
+id event_likes_count
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu

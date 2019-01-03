@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -46,10 +47,11 @@ import org.w3c.dom.Text;
 public class activityFragment extends Fragment{
     private RecyclerView eventList;
     private FirebaseAuth mAuth;
-    private DatabaseReference usersRef,postsRef;
+    private DatabaseReference usersRef,postsRef,likesRef;
     private FirebaseRecyclerAdapter<EventClass,eventViewHolder> adapter;
 
     String currentUserID;
+    Boolean likesCheck;
 
 
 
@@ -92,6 +94,7 @@ public class activityFragment extends Fragment{
         currentUserID = mAuth.getCurrentUser().getUid();
         usersRef = FirebaseDatabase.getInstance().getReference().child("Users");
         postsRef = FirebaseDatabase.getInstance().getReference().child("Events");
+        likesRef = FirebaseDatabase.getInstance().getReference().child("Interested");
 
         Query query = postsRef.orderByKey();
 
@@ -117,7 +120,7 @@ public class activityFragment extends Fragment{
 
             @Override
             protected void onBindViewHolder(eventViewHolder holder, int position, EventClass model) {
-                Log.d("yo","no this3");
+                final String PostKey = getRef(position).getKey();
 
                holder.setEventTitle(model.getEventTitle());
 
@@ -128,15 +131,46 @@ public class activityFragment extends Fragment{
                 holder.setEventCaption(model.getEventCaption());
                 holder.setEventImage(getContext(),model.getEventImage());
 
+                holder.setLikeButtonStatus(PostKey);
+
+                holder.likesEventButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        likesCheck = true;
+
+                        likesRef.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                if(likesCheck.equals(true)){
+                                    if(dataSnapshot.child(PostKey).hasChild(currentUserID)){
+                                        likesRef.child(PostKey).child(currentUserID).removeValue();
+                                        likesCheck=false;
+
+                                    }else{
+                                        likesRef.child(PostKey).child(currentUserID).setValue(true);
+                                        likesCheck=false;
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
+
+                    }
+                });
+
 
             }
             @Override
             public eventViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-                Log.d("yo","no this2");
+
                 View view = LayoutInflater.from(viewGroup.getContext())
                         .inflate(R.layout.all_activities_layout, viewGroup, false);
                 eventViewHolder ev = new eventViewHolder(view);
-                Log.d("gordon","ok2");
+
                 return ev;
             }
 
@@ -158,7 +192,7 @@ public class activityFragment extends Fragment{
     @Override
     public void onStart() {
         super.onStart();
-        Log.d("gordon","ok1");
+
         adapter.startListening();
     }
 
@@ -170,10 +204,42 @@ public class activityFragment extends Fragment{
 
     private static class eventViewHolder extends RecyclerView.ViewHolder{
 
+        ImageButton likesEventButton;
+        DatabaseReference likesRef;
+        String currentUserId;
+        int countLikes;
+        TextView eventLikesCount;
+
         View mView;
         public eventViewHolder(View itemView){
             super(itemView);
             mView=itemView;
+            likesEventButton = (ImageButton)mView.findViewById(R.id.event_likes);
+            likesRef = FirebaseDatabase.getInstance().getReference().child("Interested");
+            currentUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            eventLikesCount=(TextView)mView.findViewById(R.id.event_likes_count);
+        }
+        public void setLikeButtonStatus(final String PostKey){
+            likesRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.child(PostKey).hasChild(currentUserId)){
+                        countLikes = (int)dataSnapshot.child(PostKey).getChildrenCount();
+                        likesEventButton.setImageResource(R.drawable.star);
+                        eventLikesCount.setText(Integer.toString(countLikes)+"Interest");
+                    }else{
+                        countLikes = (int)dataSnapshot.child(PostKey).getChildrenCount();
+                        likesEventButton.setImageResource(R.drawable.star_dark);
+                        eventLikesCount.setText(Integer.toString(countLikes)+"Interest");
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
         }
         public void setEventTitle(String eventTitle){
             TextView t = (TextView)mView.findViewById(R.id.eventTitle);
