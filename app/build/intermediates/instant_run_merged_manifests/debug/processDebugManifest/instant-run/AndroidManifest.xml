@@ -13,7 +13,7 @@
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality. 
+         location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -50,20 +50,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.taruc.instacity.feed" />
-        <activity android:name="com.example.taruc.instacity.RegisterActivity" />
-        <activity android:name="com.example.taruc.instacity.LoginActivity" />
-        <activity android:name="com.example.taruc.instacity.SetupActivity" />
-        <activity android:name="com.example.taruc.instacity.editProfileActivity" />
-        <activity android:name="com.example.taruc.instacity.editProfileOptionActivity" />
-        <activity android:name="com.example.taruc.instacity.changePassword" />
+        <activity
+            android:name="com.example.taruc.instacity.feed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.taruc.instacity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.taruc.instacity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.taruc.instacity.SetupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.taruc.instacity.editProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.taruc.instacity.editProfileOptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.taruc.instacity.changePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.taruc.instacity.feedCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.taruc.instacity.MapsCreateEvent"
+            android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
              Note that the API key is linked to the encryption key used to sign the APK.
              You need a different API key for each encryption key, including the release key that is used to
              sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -76,7 +96,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.taruc.instacity.feedCommentActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

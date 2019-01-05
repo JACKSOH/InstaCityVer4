@@ -9,12 +9,12 @@ public class FeedsClass{
     public String time;
     public String uid;
     public String userName;
+    public String location;
 
     public FeedsClass(){
-
     }
 
-    public FeedsClass(String caption, String date, String postImage, String profileImage, String time, String uid, String userName) {
+    public FeedsClass(String caption, String date, String postImage, String profileImage, String time, String uid, String userName, String location) {
         this.caption = caption;
         this.date = date;
         this.postImage = postImage;
@@ -22,6 +22,15 @@ public class FeedsClass{
         this.time = time;
         this.uid = uid;
         this.userName = userName;
+        this.location = location;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public void setCaption(String caption) {

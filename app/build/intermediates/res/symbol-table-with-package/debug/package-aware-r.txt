@@ -722,6 +722,12 @@ color notSoBlack
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color place_autocomplete_prediction_primary_text
+color place_autocomplete_prediction_primary_text_highlight
+color place_autocomplete_prediction_secondary_text
+color place_autocomplete_search_hint
+color place_autocomplete_search_text
+color place_autocomplete_separator
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -880,6 +886,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -956,6 +963,16 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen place_autocomplete_button_padding
+dimen place_autocomplete_powered_by_google_height
+dimen place_autocomplete_powered_by_google_start
+dimen place_autocomplete_prediction_height
+dimen place_autocomplete_prediction_horizontal_margin
+dimen place_autocomplete_prediction_primary_text
+dimen place_autocomplete_prediction_secondary_text
+dimen place_autocomplete_progress_horizontal_margin
+dimen place_autocomplete_progress_size
+dimen place_autocomplete_separator_start
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
@@ -1132,6 +1149,10 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable password
+drawable places_ic_clear
+drawable places_ic_search
+drawable powered_by_google_dark
+drawable powered_by_google_light
 drawable sample_1
 drawable sample_2
 drawable sample_3
@@ -1190,6 +1211,7 @@ id bottom
 id button
 id button2
 id button4
+id buttonConfirm
 id buttonPanel
 id cancel_action
 id captionEvent
@@ -1267,6 +1289,7 @@ id expanded_menu
 id feedDate
 id feedDescription
 id feedImage
+id feedLocation
 id feedProfileImage
 id feedTime
 id feedUserName
@@ -1327,6 +1350,7 @@ id loginPassword
 id logout
 id love_view
 id map
+id mapForCreateEvent
 id masked
 id media_actions
 id message
@@ -1363,6 +1387,14 @@ id parent_matrix
 id percent
 id phonenum
 id pin
+id place_autocomplete_clear_button
+id place_autocomplete_powered_by_google
+id place_autocomplete_prediction_primary_text
+id place_autocomplete_prediction_secondary_text
+id place_autocomplete_progress
+id place_autocomplete_search_button
+id place_autocomplete_search_input
+id place_autocomplete_separator
 id postButton
 id post_comment_btn
 id prof_username
@@ -1374,7 +1406,6 @@ id recycleview_id
 id register
 id registerConfirmPassword
 id registerIcon
-id registerLink
 id registerPassword
 id register_email
 id rel1
@@ -1547,6 +1578,7 @@ layout activity_feed
 layout activity_feed_comment
 layout activity_login
 layout activity_maps
+layout activity_maps_create_event
 layout activity_register
 layout activity_setup
 layout all_activities_layout
@@ -1591,6 +1623,10 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout place_autocomplete_fragment
+layout place_autocomplete_item_powered_by_google
+layout place_autocomplete_item_prediction
+layout place_autocomplete_progress
 layout profile_cardview_layout
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -1694,6 +1730,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_maps_key
+string google_place_api
 string google_storage_bucket
 string hello_blank_fragment
 string help
@@ -1719,6 +1756,8 @@ string path_password_strike_through
 string phone
 string phone_text
 string phonenum
+string place_autocomplete_clear_button
+string place_autocomplete_search_hint
 string please_choose_photo_tips
 string please_enter_event
 string post
@@ -1737,6 +1776,7 @@ string status_bar_notification_info_overflow
 string time
 string title_activities
 string title_activity_maps
+string title_activity_maps_create_event
 string title_create
 string title_favourite
 string title_feed
@@ -1757,6 +1797,8 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style AppTheme
+style AppTheme_AppBarOverlay
+style AppTheme_PopupOverlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

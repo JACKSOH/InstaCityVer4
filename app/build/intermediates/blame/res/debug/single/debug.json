@@ -152,12 +152,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -208,28 +208,32 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_separator.xml.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\layout\\design_navigation_item_separator.xml"
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_separator.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_setting.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-hdpi\\ic_setting.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.xml.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_place_autocomplete_item_prediction.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\layout\\place_autocomplete_item_prediction.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_setting.png.flat",
@@ -252,6 +256,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_powered_by_google_dark.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xxxhdpi-v4\\powered_by_google_dark.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_design_password_eye.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\drawable-v21\\design_password_eye.xml"
     },
@@ -272,16 +280,16 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21_design_appbar_state_list_animator.xml.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\animator-v21\\design_appbar_state_list_animator.xml"
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_maps.xml.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\layout\\activity_maps.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_insta_city_logo.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\insta_city_logo.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_maps.xml.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\layout\\activity_maps.xml"
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21_design_appbar_state_list_animator.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_comment.png.flat",
@@ -476,12 +484,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_like.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\ic_like.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
@@ -534,6 +542,10 @@
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable\\setting.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_powered_by_google_dark.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xhdpi-v4\\powered_by_google_dark.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_email.png.flat",
@@ -600,12 +612,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\color\\abc_search_url_text.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_images.xml.flat",
@@ -652,6 +664,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_powered_by_google_light.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xxxhdpi-v4\\powered_by_google_light.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_user.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\user.png"
     },
@@ -672,6 +688,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\7c417a39bae6af6e57c5df8e673fd811\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_places_ic_clear.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xxxhdpi-v4\\places_ic_clear.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -680,12 +700,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\layout\\design_bottom_navigation_item.xml"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_send.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-hdpi\\ic_send.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
@@ -696,12 +716,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -760,6 +780,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\7ee337fb68d686f8f40aa1900041f2fc\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_powered_by_google_light.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xxhdpi-v4\\powered_by_google_light.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -790,6 +814,10 @@
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mtrl_chip_close_circle.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\drawable\\ic_mtrl_chip_close_circle.xml"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_place_autocomplete_item_powered_by_google.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24dp.xml.flat",
@@ -916,6 +944,10 @@
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_likes.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_places_ic_search.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-mdpi-v4\\places_ic_search.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\color\\mtrl_btn_text_color_selector.xml"
     },
@@ -952,12 +984,12 @@
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\layout\\fragment_favourite.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_user_24px.png.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable\\icons8_user_24px.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_exit.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-hdpi\\ic_exit.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_user_24px.png.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable\\icons8_user_24px.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
@@ -1000,12 +1032,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_comment.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\ic_comment.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -1016,16 +1048,16 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\54178e756120d0c9146e76071d7d1546\\res\\drawable\\notification_bg_low.xml"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_star_dark.png.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxxhdpi\\star_dark.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_dark.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\color\\switch_thumb_material_dark.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_star_dark.png.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxxhdpi\\star_dark.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_icons8_star_filled_24px.png.flat",
@@ -1248,6 +1280,10 @@
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\setting.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_places_ic_search.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xxhdpi-v4\\places_ic_search.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_thumb_material.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
@@ -1376,16 +1412,16 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\color\\mtrl_bottom_nav_colored_item_tint.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_switch_thumb_material.xml.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable\\abc_switch_thumb_material.xml"
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_switch_thumb_material.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1408,6 +1444,14 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_powered_by_google_dark.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xxhdpi-v4\\powered_by_google_dark.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_places_ic_clear.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xxhdpi-v4\\places_ic_clear.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
@@ -1418,6 +1462,10 @@
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_setting.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_setting.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_maps_create_event.xml.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\layout\\activity_maps_create_event.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_edittext.xml.flat",
@@ -1548,12 +1596,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\54178e756120d0c9146e76071d7d1546\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_stroke_color_selector.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\color\\mtrl_btn_stroke_color_selector.xml"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\54178e756120d0c9146e76071d7d1546\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_transformation_sheet_expand_spec.xml.flat",
@@ -1582,6 +1630,10 @@
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_text_cursor_material.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_place_autocomplete_fragment.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\layout-v21\\place_autocomplete_fragment.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -1620,6 +1672,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_powered_by_google_light.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xhdpi-v4\\powered_by_google_light.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
@@ -1640,16 +1696,20 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_like.png.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_like.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_places_ic_clear.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-hdpi-v4\\places_ic_clear.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_check_material.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_in.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\anim\\design_snackbar_in.xml"
-    },
-    {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_like.png.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_like.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -1744,6 +1804,10 @@
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\layout\\fragment_create_interface.xml"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_places_ic_search.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xxxhdpi-v4\\places_ic_search.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
@@ -1772,6 +1836,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_powered_by_google_light.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-mdpi-v4\\powered_by_google_light.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_disable_only_material_dark.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
@@ -1798,6 +1866,10 @@
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_create.xml.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\layout\\fragment_create.xml"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_powered_by_google_light.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-hdpi-v4\\powered_by_google_light.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -1864,12 +1936,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_out.xml.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\anim\\design_snackbar_out.xml"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_send.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\ic_send.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\anim_design_snackbar_out.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\anim\\design_snackbar_out.xml"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_btn_state_list_anim.xml.flat",
@@ -1908,6 +1980,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_place_autocomplete_progress.xml.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\layout\\place_autocomplete_progress.xml"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
@@ -1920,12 +1996,12 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_exit.png.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable\\exit.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_star_dark.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-mdpi\\star_dark.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_exit.png.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable\\exit.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_all_activities_layout.xml.flat",
@@ -2018,6 +2094,10 @@
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_powered_by_google_dark.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-hdpi-v4\\powered_by_google_dark.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
@@ -2116,16 +2196,16 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_star.png.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-hdpi\\star.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_star.png.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-hdpi\\star.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -2160,6 +2240,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_likes.png.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxhdpi\\ic_likes.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_inputs.xml.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\inputs.xml"
     },
@@ -2168,20 +2252,16 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_likes.png.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxhdpi\\ic_likes.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_star.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-mdpi\\star.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_star.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xxxhdpi\\star.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -2324,6 +2404,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_places_ic_clear.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xhdpi-v4\\places_ic_clear.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -2396,12 +2480,16 @@
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable\\email.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_star_dark.png.flat",
+        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\star_dark.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_star_dark.png.flat",
-        "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable-xhdpi\\star_dark.png"
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_powered_by_google_dark.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-mdpi-v4\\powered_by_google_dark.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -2528,6 +2616,10 @@
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\0335bf27f53ebbfee3138e1b32221a7a\\res\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_places_ic_search.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-hdpi-v4\\places_ic_search.png"
+    },
+    {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_edit_profile.xml.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\layout\\activity_edit_profile.xml"
     },
@@ -2538,6 +2630,10 @@
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_plus_24px.png.flat",
         "source": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\src\\main\\res\\drawable\\icons8_plus_24px.png"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_places_ic_clear.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-mdpi-v4\\places_ic_clear.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -2562,6 +2658,10 @@
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
         "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\451e1712d38faa74061e4edbb0440919\\res\\interpolator-v21\\mtrl_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_places_ic_search.png.flat",
+        "source": "C:\\Users\\boonk\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\e0bb0ed69db73d595c549b14702c937e\\res\\drawable-xhdpi-v4\\places_ic_search.png"
     },
     {
         "merged": "D:\\Android Project\\InstaCity Project\\InstaCity-5da0b01bd2298466fb98a07cbbe688f75614a56e\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_setting.png.flat",

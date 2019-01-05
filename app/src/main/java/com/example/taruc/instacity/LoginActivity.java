@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
     private Button LoginButton;
     private EditText UserEmail, UserPassword;
-    private TextView newAccount;
+    private Button newAccount;
     private ProgressDialog loadingBar;
 
     private FirebaseAuth mAuth;
@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         loadingBar = new ProgressDialog(this);
 
-        newAccount = (TextView) findViewById(R.id.registerLink);
+        newAccount = (Button) findViewById(R.id.register);
         UserEmail=(EditText) findViewById(R.id.loginEmail);
         UserPassword =(EditText)findViewById(R.id.loginPassword);
         LoginButton = (Button) findViewById(R.id.login);

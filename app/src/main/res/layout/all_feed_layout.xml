@@ -79,6 +79,16 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+        <TextView
+            android:id="@+id/feedLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="@android:color/black"
+            android:drawableLeft="@drawable/location_marker"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/feedDescription"

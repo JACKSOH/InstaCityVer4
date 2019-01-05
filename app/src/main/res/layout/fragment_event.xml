@@ -63,7 +63,7 @@ android:layout_marginTop="30dp"
         android:padding="10dp"
         android:textSize="15sp"
         />
-    <EditText
+    <TextView
         android:id="@+id/eventDate"
         android:layout_below="@+id/eventName"
         android:layout_width="250dp"
@@ -73,10 +73,11 @@ android:layout_marginTop="30dp"
         android:layout_marginEnd="23dp"
         android:ems="10"
         android:hint="@string/select_date"
-        android:inputType="textShortMessage"
         android:padding="10dp"
-        android:textSize="15sp" />
-    <EditText
+        android:textSize="15sp"
+
+        />
+    <TextView
         android:id="@+id/eventStartTime"
         android:layout_below="@+id/eventDate"
         android:layout_width="251dp"
@@ -89,7 +90,7 @@ android:layout_marginTop="30dp"
         android:inputType="textMultiLine"
         android:padding="10dp"
         android:textSize="15sp" />
-    <EditText
+    <TextView
         android:id="@+id/eventEndTime"
         android:layout_below="@+id/eventStartTime"
         android:layout_width="251dp"

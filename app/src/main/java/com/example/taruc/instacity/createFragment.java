@@ -86,7 +86,10 @@ public class createFragment extends Fragment {
     String currentUserID;
     LocationManager locationManager;
     private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS=1;
-    private GoogleMap mMap;
+
+
+    double latitude,longtitude;
+    String str,userName,cap,userProfileImage;
 
 
     private OnFragmentInteractionListener mListener;
@@ -150,100 +153,6 @@ public class createFragment extends Fragment {
             }
         });
 
-        /*locationManager = (LocationManager) getActivity().getSystemService(LOCATION_SERVICE);
-
-        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(getActivity(),
-                    new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-                    MY_PERMISSIONS_REQUEST_READ_CONTACTS);
-        }
-
-
-        //check the network provider is enabled
-        if(locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
-            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, new LocationListener() {
-                @Override
-                public void onLocationChanged(Location location) {
-                    //get latitude
-                    double latitude=location.getLatitude();
-                    //get longtitude
-                    double longitude = location.getLongitude();
-                    LatLng latlng = new LatLng(latitude,longitude);
-                    Toast.makeText(getActivity(),latlng.toString(),Toast.LENGTH_SHORT);
-                    Geocoder geocoder = new Geocoder(getActivity(),Locale.getDefault());
-                    try{
-                        List<Address> addressList = geocoder.getFromLocation(latitude,longitude,1);
-                        String str = addressList.get(0).getAddressLine(0);
-                                str+=addressList.get(0).getLocality()+",";
-                        str+= addressList.get(0).getCountryName();
-                        Toast.makeText(getActivity(),latlng.toString(),Toast.LENGTH_SHORT).show();
-
-
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng,13F));
-                    }catch (IOException e){
-                        e.printStackTrace();
-                    }
-
-                }
-
-                @Override
-                public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                }
-
-                @Override
-                public void onProviderEnabled(String provider) {
-
-                }
-
-                @Override
-                public void onProviderDisabled(String provider) {
-
-                }
-            });
-        }else if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new LocationListener() {
-                @Override
-                public void onLocationChanged(Location location) {
-                    //get latitude
-                    double latitude=location.getLatitude();
-                    //get longtitude
-                    double longitude = location.getLongitude();
-                    LatLng latlng = new LatLng(latitude,longitude);
-
-                    Geocoder geocoder = new Geocoder(getActivity(),Locale.getDefault());
-                    try{
-                        List<Address> addressList = geocoder.getFromLocation(latitude,longitude,1);
-                       String str=addressList.get(0).getAddressLine(0)+",";
-                        str += addressList.get(0).getLocality()+",";
-                         str+= addressList.get(0).getCountryName();
-                        Toast.makeText(getActivity(),str,Toast.LENGTH_SHORT).show();
-
-
-
-                    }catch (IOException e){
-                        e.printStackTrace();
-                    }
-
-                }
-
-                @Override
-                public void onStatusChanged(String provider, int status, Bundle extras) {
-
-                }
-
-                @Override
-                public void onProviderEnabled(String provider) {
-
-                }
-
-                @Override
-                public void onProviderDisabled(String provider) {
-
-                }
-            });
-        };*/
 
 
 
@@ -387,34 +296,177 @@ public class createFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot){
                 if(dataSnapshot.exists()){
-                    String userName = dataSnapshot.child("userName").getValue().toString();
-                    String userProfileImage = dataSnapshot.child("profileImage").getValue().toString();
-                    String cap = caption.getText().toString();
+
+                    userName = dataSnapshot.child("userName").getValue().toString();
+                    userProfileImage = dataSnapshot.child("profileImage").getValue().toString();
+                    cap = caption.getText().toString();
 
 
-                    HashMap postMap=new HashMap();
-                    postMap.put("uid",currentUserID);
-                    postMap.put("date",saveCurrentDate);
-                    postMap.put("time",saveCurrentTime);
-                    postMap.put("caption",cap);
-                    postMap.put("postImage",downloadUrl);
-                    postMap.put("userName",userName);
-                    postMap.put("profileImage",userProfileImage);
+                    locationManager = (LocationManager) getActivity().getSystemService(LOCATION_SERVICE);
 
-                   PostRef.child(post).updateChildren(postMap).addOnCompleteListener(new OnCompleteListener() {
-                        @Override
-                        public void onComplete(@NonNull Task task) {
-                            if(task.isSuccessful()){
-                                SendUserToMainActivity();
-                                Toast.makeText(getActivity(),"Your Posts is created successfully...",Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
-                            }else{
-                                String message = task.getException().getMessage();
-                                Toast.makeText(getActivity(),"Error Occured:"+message,Toast.LENGTH_SHORT).show();
-                                loadingBar.dismiss();
+                    if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+                        ActivityCompat.requestPermissions(getActivity(),
+                                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                                MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+                    }
+
+
+                    //check the network provider is enabled
+                    if(locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+                        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, new LocationListener() {
+                            @Override
+                            public void onLocationChanged(Location location) {
+
+                                //get latitude
+                                latitude=location.getLatitude();
+                                //get longtitude
+                                longtitude = location.getLongitude();
+                                LatLng latlng = new LatLng(latitude,longtitude);
+                                Toast.makeText(getActivity(),latlng.toString(),Toast.LENGTH_SHORT);
+                                Geocoder geocoder = new Geocoder(getActivity(),Locale.getDefault());
+                                try{
+                                    List<Address> addressList = geocoder.getFromLocation(latitude,longtitude,1);
+                                    String str = addressList.get(0).getAddressLine(0);
+                                    str+=addressList.get(0).getLocality();
+                                    HashMap postMap=new HashMap();
+                                    postMap.put("uid",currentUserID);
+                                    postMap.put("date",saveCurrentDate);
+                                    postMap.put("time",saveCurrentTime);
+                                    postMap.put("caption",cap);
+                                    postMap.put("postImage",downloadUrl);
+                                    postMap.put("userName",userName);
+                                    postMap.put("profileImage",userProfileImage);
+                                    postMap.put("location",str);
+
+
+                                    PostRef.child(post).updateChildren(postMap).addOnCompleteListener(new OnCompleteListener() {
+                                        @Override
+                                        public void onComplete(@NonNull Task task) {
+                                            if(task.isSuccessful()){
+                                                SendUserToMainActivity();
+
+                                                Toast.makeText(getActivity(),"Your Posts is created successfully...",Toast.LENGTH_SHORT).show();
+                                                loadingBar.dismiss();
+
+                                            }else{
+                                                String message = task.getException().getMessage();
+                                                Toast.makeText(getActivity(),"Error Occured:"+message,Toast.LENGTH_SHORT).show();
+                                                loadingBar.dismiss();
+                                            }
+                                        }
+                                    });
+
+
+
+//                                    Toast.makeText(getActivity(),latitude+longtitude+"",Toast.LENGTH_SHORT).show();
+//                                    HashMap locationMap=new HashMap();
+//                                    locationMap.put("latitude",latitude);
+//                                    locationMap.put("longitude",longtitude);
+//                                    locationMap.put("Location Name",str);
+//
+//                                    PostRef.child(post).child("Location").updateChildren(locationMap).addOnCompleteListener(new OnCompleteListener() {
+//                                        @Override
+//                                        public void onComplete(@NonNull Task task) {
+//                                            if(task.isSuccessful()){
+//                                                SendUserToMainActivity();
+//                                                Toast.makeText(getActivity(),"Your Posts is created successfully...",Toast.LENGTH_SHORT).show();
+//
+//                                            }else{
+//                                                String message = task.getException().getMessage();
+//                                                Toast.makeText(getActivity(),"Error Occured:"+message,Toast.LENGTH_SHORT).show();
+//                                                loadingBar.dismiss();
+//                                            }
+//                                        }
+//                                    });
+
+
+                                    //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng,13F));
+                                }catch (IOException e){
+                                    e.printStackTrace();
+                                }
+
                             }
-                        }
-                    });
+
+                            @Override
+                            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                            }
+
+                            @Override
+                            public void onProviderEnabled(String provider) {
+
+                            }
+
+                            @Override
+                            public void onProviderDisabled(String provider) {
+
+                            }
+                        });
+                    }else if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+                        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new LocationListener() {
+                            @Override
+                            public void onLocationChanged(Location location) {
+                                //get latitude
+                                latitude=location.getLatitude();
+                                //get longtitude
+                                longtitude = location.getLongitude();
+                                LatLng latlng = new LatLng(latitude,longtitude);
+
+                                Geocoder geocoder = new Geocoder(getActivity(),Locale.getDefault());
+                                try{
+                                    List<Address> addressList = geocoder.getFromLocation(latitude,longtitude,1);
+                                    str=addressList.get(0).getAddressLine(0)+",";
+                                    str += addressList.get(0).getLocality()+",";
+                                    str+= addressList.get(0).getCountryName();
+                                    Toast.makeText(getActivity(),str,Toast.LENGTH_SHORT).show();
+
+                                    HashMap locationMap=new HashMap();
+                                    locationMap.put("latitude",latitude);
+                                    locationMap.put("longitude",longtitude);
+                                    locationMap.put("locationName",str);
+
+                                    PostRef.child(post).child("Location").updateChildren(locationMap).addOnCompleteListener(new OnCompleteListener() {
+                                        @Override
+                                        public void onComplete(@NonNull Task task) {
+                                            if(task.isSuccessful()){
+                                                SendUserToMainActivity();
+                                                Toast.makeText(getActivity(),"Your Posts is created successfully...",Toast.LENGTH_SHORT).show();
+
+                                            }else{
+                                                String message = task.getException().getMessage();
+                                                Toast.makeText(getActivity(),"Error Occured:"+message,Toast.LENGTH_SHORT).show();
+                                                loadingBar.dismiss();
+                                            }
+                                        }
+                                    });
+
+
+
+                                }catch (IOException e){
+                                    e.printStackTrace();
+                                }
+
+                            }
+
+                            @Override
+                            public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                            }
+
+                            @Override
+                            public void onProviderEnabled(String provider) {
+
+                            }
+
+                            @Override
+                            public void onProviderDisabled(String provider) {
+
+                            }
+                        });
+                    };
+
+
                 }else{
                     loadingBar.dismiss();
 
@@ -435,4 +487,5 @@ public class createFragment extends Fragment {
         startActivity(mainIntent);
 
     }
+
 }

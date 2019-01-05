@@ -60,7 +60,7 @@ public class feedCommentActivity extends AppCompatActivity {
         commentList = (RecyclerView)findViewById(R.id.comments_list);
         commentList.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setReverseLayout(true);
+        llm.setReverseLayout(false);
         llm.setStackFromEnd(true);
         commentList.setLayoutManager(llm);
 

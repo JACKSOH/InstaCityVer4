@@ -1,7 +1,11 @@
 package com.example.taruc.instacity;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,12 +17,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -44,21 +56,27 @@ public class create_eventFragment extends Fragment {
 
     private Spinner locationSpinner;
     private EditText titleEvent;
-    private EditText eventDate;
-    private EditText eventSTime;
-    private EditText eventETime;
+    private TextView eventDate;
+    private TextView eventSTime;
+    private TextView eventETime;
     private EditText captionEvent;
     private Button postButton;
     private ImageButton postImage;
-
+    private static final int PLACE_PICKER_REQUEST = 1;
     private FirebaseAuth mAuth;
     private DatabaseReference UsersRef,PostRef;
     private ProgressDialog loadingBar;
     private static final int Gallery_Pick=1;
     private Uri ImageUri;
-
+    private DatePickerDialog.OnDateSetListener mDateListener;
+    private TimePickerDialog.OnTimeSetListener mETimeListerner;
+    private TimePickerDialog.OnTimeSetListener mSTimeListerner;
     private StorageReference PostsImagesReference;
     private String saveCurrentDate,saveCurrentTime,post,downloadUrl;
+    private String EventLocation;
+    private String EventLocationShort;
+    private String EventLngLtl;
+
     String currentUserID;
 
 
@@ -79,7 +97,7 @@ public class create_eventFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -94,7 +112,7 @@ public class create_eventFragment extends Fragment {
         captionEvent = (EditText)view.findViewById(R.id.captionEvent);
         titleEvent = view.findViewById(R.id.eventName);
         eventDate = view.findViewById(R.id.eventDate);
-        eventSTime=view.findViewById(R.id.eventStartTime);
+        eventSTime= view.findViewById(R.id.eventStartTime);
         eventETime = view.findViewById(R.id.eventEndTime);
         locationSpinner = view.findViewById(R.id.locationEventSpinner);
         postButton = (Button) view.findViewById(R.id.postButton);
@@ -102,7 +120,7 @@ public class create_eventFragment extends Fragment {
         postButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("hihi","testing 1 2 333");
+
                 inputFieldValidation();
             }
         });
@@ -113,8 +131,95 @@ public class create_eventFragment extends Fragment {
                 OpenGallery();
             }
         });
+        //Location spinner indicate
+        locationSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(locationSpinner.getSelectedItem().toString().toLowerCase().equals("others")){
+                    Toast.makeText(getContext(), "Choose a location on Map", Toast.LENGTH_LONG).show();
+                    // go to maps activity
+
+                    PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+                    try {
+                        Intent intent = builder.build(getActivity());
+                        startActivityForResult(intent, PLACE_PICKER_REQUEST);
+                    } catch (GooglePlayServicesRepairableException e) {
+                        e.printStackTrace();
+                    } catch (GooglePlayServicesNotAvailableException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        //Date picker intialize
+        eventDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dateDialog = new DatePickerDialog(getContext(),android.R.style.Theme_Holo_Light_Dialog_NoActionBar,mDateListener,year,month,day);
+                dateDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dateDialog.show();
+            }
+        });
+            mDateListener = new DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                    month+=1;
+                    String date = month+"/"+dayOfMonth+"/"+year;
+                    eventDate.setText("EventDate: "+date);
+                }
+            };
+//End time intialize
+        eventETime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                int minute = cal.get(Calendar.MINUTE);
 
 
+                TimePickerDialog timeDialog = new TimePickerDialog(getContext(),android.R.style.Theme_Holo_Light_Dialog_NoActionBar,mETimeListerner,hour,minute,true);
+                timeDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                timeDialog.show();
+            }
+        });
+        mETimeListerner = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                String EndTime = String.format("%02d",hourOfDay)+":"+String.format("%02d",minute);
+                eventETime.setText("EndTime:"+EndTime);
+            }
+        };
+        // start time initialize
+        eventSTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                int minute = cal.get(Calendar.MINUTE);
+
+
+                TimePickerDialog timeDialog = new TimePickerDialog(getContext(),android.R.style.Theme_Holo_Light_Dialog_NoActionBar,mSTimeListerner,hour,minute,true);
+                timeDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                timeDialog.show();
+            }
+        });
+        mSTimeListerner = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                String StartTime = String.format("%02d",hourOfDay)+":"+String.format("%02d",minute);
+                eventSTime.setText("StartTime :"+StartTime);
+            }
+        };
         return view;
         // Inflate the layout for this fragment
 
@@ -136,7 +241,16 @@ public class create_eventFragment extends Fragment {
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
+        if (requestCode == PLACE_PICKER_REQUEST) {
+            if (resultCode == RESULT_OK) {
+                Place place = PlacePicker.getPlace(getActivity(),data);
+                String toastMsg = String.format("Place: %s", place.getName());
+                EventLocation = place.getAddress().toString();
+                EventLocationShort = place.getName().toString();
+                EventLngLtl = place.getLatLng().toString();
+                Toast.makeText(getContext(), toastMsg, Toast.LENGTH_LONG).show();
+            }
+        }
 
         if(requestCode==Gallery_Pick&&resultCode==RESULT_OK&&data!=null){
             ImageUri = data.getData();

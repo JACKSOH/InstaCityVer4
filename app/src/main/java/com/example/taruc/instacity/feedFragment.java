@@ -143,6 +143,7 @@ public class feedFragment extends Fragment{
                 holder.setTime(model.getTime());
                 holder.setPostImage(getContext(),model.getPostImage());
                 holder.setProfileImage(getContext(),model.getProfileImage());
+                holder.setLocation(model.getLocation());
 
                 holder.feedComment.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -235,6 +236,10 @@ public class feedFragment extends Fragment{
             ImageView image=(ImageView)mView.findViewById(R.id.feedImage);
             Picasso.with(ctx1).load(postImage).into(image);
             // workerTask = new BitMapWorkerTask(image);
+        }
+        public void setLocation(String location){
+            TextView locate = (TextView)mView.findViewById(R.id.feedLocation);
+            locate.setText(location);
         }
     }
 
