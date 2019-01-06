@@ -196,6 +196,7 @@ public class activityFragment extends Fragment{
         adapter.startListening();
     }
 
+
     @Override
     public void onStop() {
         super.onStop();

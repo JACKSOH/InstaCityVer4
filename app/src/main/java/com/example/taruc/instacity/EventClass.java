@@ -12,23 +12,55 @@ public class EventClass {
     public String endTime;
     public String location;
     public String uid;
+    public String locationShort;
+    public double lat;
+    public double lng;
 
     public EventClass(){
 
     }
-    public EventClass(String eventCaption,String eventTitle, String uploadDate,String uploadTime,String eventDate, String eventImage, String userName,  String startTime, String endTime, String location, String uid) {
+
+    public EventClass(String userName, String uploadDate, String uploadTime, String startTime, String eventTitle, String eventCaption, String eventDate, String eventImage, String endTime, String location, String uid, String locationShort, double lat, double lng) {
+        this.userName = userName;
+        this.uploadDate = uploadDate;
+        this.uploadTime = uploadTime;
+        this.startTime = startTime;
+        this.eventTitle = eventTitle;
         this.eventCaption = eventCaption;
         this.eventDate = eventDate;
         this.eventImage = eventImage;
-        this.userName = userName;
-        this.uploadDate= uploadDate;
-        this.uploadTime = uploadTime;
-        this.startTime = startTime;
         this.endTime = endTime;
         this.location = location;
         this.uid = uid;
-        this.eventTitle = eventTitle;
+        this.locationShort = locationShort;
+        this.lat = lat;
+        this.lng = lng;
     }
+
+    public String getLocationShort() {
+        return locationShort;
+    }
+
+    public void setLocationShort(String locationShort) {
+        this.locationShort = locationShort;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+
+    public void setLng(double lng) {
+        this.lng = lng;
+    }
+
     public String getEventCaption() {
         return eventCaption;
     }

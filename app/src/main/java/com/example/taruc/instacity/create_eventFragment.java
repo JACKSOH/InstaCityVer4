@@ -6,6 +6,8 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.location.Address;
+import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,8 +15,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.EventLog;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -44,9 +48,12 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -58,11 +65,11 @@ public class create_eventFragment extends Fragment {
     private EditText titleEvent;
     private TextView eventDate;
     private TextView eventSTime;
-    private TextView eventETime;
+    private TextView eventETime,locationEventName;
     private EditText captionEvent;
-    private Button postButton;
+    private Button postButton,reselectButton;
     private ImageButton postImage;
-    private static final int PLACE_PICKER_REQUEST = 1;
+    private static final int PLACE_PICKER_REQUEST = 2;
     private FirebaseAuth mAuth;
     private DatabaseReference UsersRef,PostRef;
     private ProgressDialog loadingBar;
@@ -75,7 +82,7 @@ public class create_eventFragment extends Fragment {
     private String saveCurrentDate,saveCurrentTime,post,downloadUrl;
     private String EventLocation;
     private String EventLocationShort;
-    private String EventLngLtl;
+    private double EventLat,EventLng;
 
     String currentUserID;
 
@@ -102,7 +109,7 @@ public class create_eventFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_event, container, false);
-
+reselectButton = (Button) view.findViewById(R.id.reselectButton);
         mAuth = FirebaseAuth.getInstance();
         currentUserID = mAuth.getCurrentUser().getUid();
         UsersRef = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUserID);
@@ -115,6 +122,7 @@ public class create_eventFragment extends Fragment {
         eventSTime= view.findViewById(R.id.eventStartTime);
         eventETime = view.findViewById(R.id.eventEndTime);
         locationSpinner = view.findViewById(R.id.locationEventSpinner);
+        locationEventName = view.findViewById(R.id.locationEventName);
         postButton = (Button) view.findViewById(R.id.postButton);
         postImage = (ImageButton) view.findViewById(R.id.createEventImage);
         postButton.setOnClickListener(new View.OnClickListener() {
@@ -125,6 +133,24 @@ public class create_eventFragment extends Fragment {
             }
         });
 
+        reselectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reselectButton.setBackgroundColor(Color.LTGRAY);
+                Toast.makeText(getContext(), "Choose a location on Map", Toast.LENGTH_LONG).show();
+                // go to maps activity
+
+                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+                try {
+                    Intent intent = builder.build(getActivity());
+                    startActivityForResult(intent, PLACE_PICKER_REQUEST);
+                } catch (GooglePlayServicesRepairableException e) {
+                    e.printStackTrace();
+                } catch (GooglePlayServicesNotAvailableException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
         postImage.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -135,6 +161,9 @@ public class create_eventFragment extends Fragment {
         locationSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+
+
                 if(locationSpinner.getSelectedItem().toString().toLowerCase().equals("others")){
                     Toast.makeText(getContext(), "Choose a location on Map", Toast.LENGTH_LONG).show();
                     // go to maps activity
@@ -146,6 +175,17 @@ public class create_eventFragment extends Fragment {
                     } catch (GooglePlayServicesRepairableException e) {
                         e.printStackTrace();
                     } catch (GooglePlayServicesNotAvailableException e) {
+                        e.printStackTrace();
+                    }
+                }else{
+                    Geocoder geocoder = new Geocoder(getActivity(),Locale.getDefault());
+                    try{
+                        List<Address> addressList = geocoder.getFromLocationName(locationSpinner.getSelectedItem().toString(),1);
+                        EventLat = addressList.get(0).getLatitude();
+                        EventLng = addressList.get(0).getLongitude();
+                        EventLocationShort = addressList.get(0).getLocality();
+                        EventLocation = addressList.get(0).getAddressLine(0)+addressList.get(0).getAddressLine(1)+addressList.get(0).getAddressLine(2);
+                    }catch (IOException e){
                         e.printStackTrace();
                     }
                 }
@@ -243,12 +283,16 @@ public class create_eventFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == PLACE_PICKER_REQUEST) {
             if (resultCode == RESULT_OK) {
+                locationSpinner.setEnabled(false);
+                reselectButton.setBackgroundColor(Color.WHITE);
+                reselectButton.setVisibility(View.VISIBLE);
                 Place place = PlacePicker.getPlace(getActivity(),data);
-                String toastMsg = String.format("Place: %s", place.getName());
                 EventLocation = place.getAddress().toString();
                 EventLocationShort = place.getName().toString();
-                EventLngLtl = place.getLatLng().toString();
-                Toast.makeText(getContext(), toastMsg, Toast.LENGTH_LONG).show();
+                EventLat = place.getLatLng().latitude;
+                EventLng = place.getLatLng().longitude;
+                locationEventName.setText(EventLocationShort);
+
             }
         }
 
@@ -327,7 +371,10 @@ public class create_eventFragment extends Fragment {
                     String eTime = eventETime.getText().toString();
                     String date = eventDate.getText().toString();
                     String eventTitle = titleEvent.getText().toString();
-                    String location = locationSpinner.getSelectedItem().toString();
+                    String location =EventLocation;
+                    String locationShort = EventLocationShort;
+                    double lng = EventLng;
+                    double lat = EventLat;
                     HashMap postMap = new HashMap();
                     postMap.put("uid", currentUserID);
                     postMap.put("userName", userName);
@@ -340,6 +387,9 @@ public class create_eventFragment extends Fragment {
                     postMap.put("endTime",eTime);
                     postMap.put("eventTitle",eventTitle);
                     postMap.put("location",location);
+                    postMap.put("lng",lng);
+                    postMap.put("lat",lat);
+                    postMap.put("locationShort",locationShort);
 
                     Log.d("hihi","testing 222 ");
                     PostRef.child(post).updateChildren(postMap).addOnCompleteListener(new OnCompleteListener() {

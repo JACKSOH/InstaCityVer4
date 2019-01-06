@@ -1341,6 +1341,7 @@ id line1
 id line3
 id listMode
 id list_item
+id locationEventName
 id locationEventSpinner
 id locationFeedSpinner
 id login
@@ -1409,6 +1410,7 @@ id registerIcon
 id registerPassword
 id register_email
 id rel1
+id reselectButton
 id retype_pass
 id right
 id right_icon

@@ -160,16 +160,26 @@ android:layout_marginTop="30dp"
         android:layout_marginTop="43dp"
 
         android:layout_marginBottom="-4dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationEventName"
+        android:layout_below="@+id/locationEventSpinner"
+        android:layout_marginStart="45dp"
+
+        />
     <Button
+        android:visibility="invisible"
+        android:id="@+id/reselectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reselect"
         android:layout_toRightOf="@id/locationEventSpinner"
         android:layout_below="@+id/titleNewEvent"
         android:textSize="10dp"
-        android:textColor="@color/common_google_signin_btn_text_dark_disabled"
+        android:textColor="@color/notSoBlack"
 
-        android:background="@color/lightGrey"
+        android:background="@color/pureWhite"
         android:layout_marginTop="43dp"
         android:layout_marginBottom="-4dp"
         />
