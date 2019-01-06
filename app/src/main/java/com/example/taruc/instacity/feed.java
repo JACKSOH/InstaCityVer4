@@ -36,7 +36,7 @@ import com.google.firebase.database.ValueEventListener;
 public class feed extends AppCompatActivity{
 
     feedFragment feedFrag;
-    activityFragment activityFrag;
+    eventLocate activityFrag;
     create_interfaceFragment createIntFrag;
     favouriteFragment favouriteFrag;
     profileFragment profileFrag;
@@ -230,7 +230,7 @@ public class feed extends AppCompatActivity{
     private void setupViewPager(ViewPager viewPager) {
         PagerAdapter viewPagerAdapter = new PagerAdapter(getSupportFragmentManager());
         feedFrag = new feedFragment();
-        activityFrag = new activityFragment();
+        activityFrag = new eventLocate();
         createIntFrag = new create_interfaceFragment();
         favouriteFrag = new favouriteFragment();
         profileFrag = new profileFragment();

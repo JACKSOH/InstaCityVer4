@@ -148,13 +148,24 @@ public class EventClass {
         this.eventTitle = eventTitle;
     }
 
-
-
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "EventClass{" +
+                "userName='" + userName + '\'' +
+                ", uploadDate='" + uploadDate + '\'' +
+                ", uploadTime='" + uploadTime + '\'' +
+                ", startTime='" + startTime + '\'' +
+                ", eventTitle='" + eventTitle + '\'' +
+                ", eventCaption='" + eventCaption + '\'' +
+                ", eventDate='" + eventDate + '\'' +
+                ", eventImage='" + eventImage + '\'' +
+                ", endTime='" + endTime + '\'' +
+                ", location='" + location + '\'' +
+                ", uid='" + uid + '\'' +
+                ", locationShort='" + locationShort + '\'' +
+                ", lat=" + lat +
+                ", lng=" + lng +
+                '}';
+    }
 }
 

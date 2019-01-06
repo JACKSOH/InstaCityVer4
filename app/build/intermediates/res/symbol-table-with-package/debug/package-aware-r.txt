@@ -1277,6 +1277,7 @@ id eventETime
 id eventEndTime
 id eventImage
 id eventLocationLabel
+id eventMap
 id eventName
 id eventSTime
 id eventStartTime
@@ -1604,6 +1605,7 @@ layout fragment_activity
 layout fragment_create
 layout fragment_create_interface
 layout fragment_event
+layout fragment_event_locate
 layout fragment_favourite
 layout fragment_feed
 layout fragment_profile
@@ -1777,6 +1779,7 @@ string setting
 string status_bar_notification_info_overflow
 string time
 string title_activities
+string title_activity_event_location
 string title_activity_maps
 string title_activity_maps_create_event
 string title_create
